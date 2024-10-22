@@ -1,0 +1,37 @@
+#%RAML 1.0
+title: calculator-api
+
+traits:
+  que: !include /Traits/trait.raml
+mediaType: [application/json]
+/addition:
+  get:
+    is: [que]
+    responses:
+      200:
+        body:
+            example: !include Examples/addition-response-file.json
+        
+/subtraction:
+  get:
+    is: [que]
+    responses:
+      200:
+        body:
+            example: !include /Examples/subtraction-response-file.json
+             
+/division:
+  get:
+    is: [que]
+    responses:
+      200:
+        body:
+            example: !include Examples/division-response-file.json
+              
+/multiplication:
+  get:
+    is: [que]
+    responses:
+      200:
+        body:
+            example: !include Examples/multiplication-response-file.json
